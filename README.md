@@ -6,7 +6,7 @@ We keep the custom ROS packages in a default directory: catkin_ws
 An additional file of Arduino code is included. This is the Teensyduino’s firmware and can be loaded using Arduino IDE.
 
 
-# CyPhyHouse Notes
+# TK1 and RACECARJ Notes
 
 
 ## IMU Calibration
