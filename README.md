@@ -90,4 +90,5 @@ After installing the package you can run some examples included in the library.
 For the sensor mount, the [RACECARJ](https://racecarj.com/collections/all) was used on the f1tenth. The original lidar base ![original lidar base](https://github.com/axander89/f1tenth_code/blob/master/RacecarJ/Images/LidarMountOriginal.png) was modified to fit aditional parts to make the mount taller. This file was 3D designed ![3D designed](https://github.com/axander89/f1tenth_code/blob/master/RacecarJ/Images/LidarMount_Modified2.PNG) 
 
 using creo, and [3D printed](https://github.com/axander89/f1tenth_code/blob/master/RacecarJ/Images/LidarMount_Modified3.PNG) at the [Innovation Studio](http://innovationstudio.mechse.illinois.edu). 
-The files are at [creo](https://github.com/axander89/f1tenth_code/blob/master/RacecarJ/Creo.zip)
+In the 3D design mount, the outer slits are to fit the two aditional mounts which attach the sensor mount to the chassis. The files are at [creo](https://github.com/axander89/f1tenth_code/blob/master/RacecarJ/Creo.zip)
+
