@@ -4,4 +4,3 @@ This repo contains all custom code (i.e. not including libraries/packages necess
 We keep the custom ROS packages in a default directory: catkin_ws
 
 An additional file of Arduino code is included. This is the Teensyduino’s firmware and can be loaded using Arduino IDE.
-"dummy commit"
