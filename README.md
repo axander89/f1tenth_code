@@ -81,7 +81,8 @@ If you have all the prerequisites, then you only need to download the **ORB_SLAM
  2. `$ cd ORB_SLAM2 `
  3. `$ chmod +x build.sh `
  4. `$ ./build.sh `
-5. **CyPhyHouse Notes for the TK1:**  Another way to do this, which is the way I did it, is to use Anaconda or miniconda, and installing the prerequired packages on a virtual environment and finally install the ORB_SLAM2 the executing the commands above. Keep in mind that if you decide to do this, on TK1, TX2 or other CPUs, you will need more meory (~ 3GB for Anaconda and 300MB for miniconda). I used Anaconda and it the installation of the ORB_SLAM2 packages were build succesfully. 
+
+**CyPhyHouse Notes for the TK1:**  Another way to do this, which is the way I did it, is to use Anaconda or miniconda, and installing the prerequired packages on a virtual environment and finally install the ORB_SLAM2 the executing the commands above. Keep in mind that if you decide to do this, on TK1, TX2 or other CPUs, you will need more meory (~ 3GB for Anaconda and 300MB for miniconda). I used Anaconda and it the installation of the ORB_SLAM2 packages were build succesfully. 
 
 After installing the package you can run some examples included in the library.
 
