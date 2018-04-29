@@ -16,12 +16,11 @@ The calibration for the IMU was done following this [calibration](http://wiki.ro
 1. Open razor_imu_9dof/src/Razor_AHRS/Razor_AHRS.ino with Arduino, [(Installing the 9DoF Razor Arduino Core)](https://learn.sparkfun.com/tutorials/9dof-razor-imu-m0-hookup-guide?_ga=2.202271377.102418616.1524613608-803068393.1505939054#installing-the-9dof-razor-arduino-core), and find the section "USER SETUP AREA" / "SENSOR CALIBRATION". This is where you put the calibration values later!
 
 2. Connect the Razor to your computer, set the correct serial port in Arduino and open the serial monitor
-![Serial Monitort](imgs/serial.png "Serial Monitor")
 
 3. Set the firmware output mode to calibration by sending the string #oc. You should now see the output like this
 `accel x,y,z (min/max) = -5.00/-1.00  25.00/29.00  225.00/232.00`
 
-4. Calibrate the Accelerometer
+### Calibrate the Accelerometer
 
 1. We'll try to find the minimum and maximum output values for the earth gravitation on each axis. When you move the board, move it real slowly, so the acceleration you apply to it is as small as possible. We only want pure gravity!
 2. Take the board and point straight down with the x-axis (remember: x-axis = towards the short edge with the connector holes). While you do that, you can see the x-maximum (the second value) getting bigger.
@@ -34,7 +33,7 @@ The calibration for the IMU was done following this [calibration](http://wiki.ro
 9. CAUTION: You have to be really careful when doing this! Even slightly tapping the board with the finger messes up the measurement (try it!) and leads to wrong calibration. Use #oc very often and double check your min/max values)
 10. **CyPhyHouse Notes for the TK1:** Just be careful and gentle when obtaining these calibrations values. You might want to do it a couple of times (3-5) and average the values!! That is what I did. 
 
-5. Calibrating the gyroscope
+### Calibrating the gyroscope
 
 1. Lay the Razor AHRS still on the table.
 2. We’re still in calibration mode for the accelerometer. Send #on twice, which will move calibration past the magnetometer to the gyroscope.
@@ -44,7 +43,7 @@ The calibration for the IMU was done following this [calibration](http://wiki.ro
 5. If you think you messed up the measurement by shaking or moving the board, you can reset by sending #oc.
 6. Take the second values of each pair and put them into Razor_AHRS.ino.
 
-6. Calibrating the magnetometer
+### Calibrating the magnetometer
 
 This procedure compensates for hard and soft iron errors. Still, in both cases the source of distortion has to be fixed in the sensor coordinate system, i.e. moving and rotating with the sensor.
 
@@ -67,7 +66,7 @@ For the purpose of obtaining odometry and control as well as other benefits of c
 
 This package runs OpenCV as well as linear algebra, visualization and user interfaces packages. 
 
-1. Prerequisites
+### Prerequisites
 
 1. Ubuntu 12.04, 14.04 and 16.04 will run this package succesfully.
 2. C++11 or C++0x Compiler. **CyPhyHouse Notesfor the TK1:** I tried to install this on my Mac first since I was considering the lack of memory in the TK1. However, I had issues since the OS compiler is clang. The CMakeLists.txt. uses libraries for C++, so clang will give erros.
@@ -75,7 +74,7 @@ This package runs OpenCV as well as linear algebra, visualization and user inter
 4. **Note** [DBoW2](https://github.com/dorian3d/DBoW2) and [g2o](https://github.com/RainerKuemmerle/g2o) are also required, **BUT** these are included in the ORB_SLAM2 package, so you do not need to install those seperately.
 5. **CyPhyHouse Notes for the TK1:** These packages are somewhat large, and we would need a minimun of approximately 6GB available. I tried to install this on the TK1, but some of the libraries did not install due to memory issues. For better results, I higly recommend the TX2.
 
-2. Build
+### Build
 If you have all the prerequisites, then you only need to download the **ORB_SLAM2** and install it. The package has a build.sh script that takes care of building all the the ORB_SLAM, and the DBoW2 and g2o (Thirdparty libraries). Execute the following comands in the termianal.
 
 1. $ git clone https://github.com/raulmur/ORB_SLAM2.git ORB_SLAM2
