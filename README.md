@@ -52,12 +52,11 @@ This procedure compensates for hard and soft iron errors. Still, in both cases t
 3. Test whether the sensor is affected by proximity to the robot. Move the Razor AHRS closer and further away from the robot while holding its attitude constant, and make sure readings at your desired mounting location aren't affected by proximity to the robot.
 4. Test whether the sensor is affected when the motors run. Run the robot motors forward and backward (with the robot up on a stand!). If the output changes, you need to move the Razor AHRS further away from the robot.
 5. Download and install [Processing.](https://processing.org) We will use it to compile and run the test program. Any Processing versions 2.x should work fine, tested with version 2.0.3.
-6. Quit all applications that read from the sensor (e.g. Serial Monitor, 3D Visualization GUI, …) and run the Processing magnetometer calibration sketch located in $ razor_imu_9dof/magnetometer_calibration/Processing/Magnetometer_calibration.
+6. Quit all applications that read from the sensor (e.g. Serial Monitor, 3D Visualization GUI, …) and run the Processing magnetometer calibration sketch located in ` $ razor_imu_9dof/magnetometer_calibration/Processing/Magnetometer_calibration `
 7. Note: you have to install the EJML library first, or else the sketch won’t run. How to do that? Have a look at the NOTE at the top of Magnetometer_calibration.pde.
 8. Try to rotate the sensor in a way so that you cover all orientations so you produce dots that more or less evenly cover the sphere.
 9. In a mostly undistorted environment this could look something like this:
-10. **CyPhyHouse Notes for the TK1:**  [Processing](https://processing.org) was installed, but there were some other packages needed for the TK1. Nicole Installed this packages and was able to calibrate the magnetometer.
-Also, be careful and make sure that the place where the IMU is mounted does not have strong magnetic fields (motors for instance)
+10. **CyPhyHouse Notes for the TK1:**  [Processing](https://processing.org) was installed, but there were some other packages needed for the TK1. Nicole [Installed](https://sites.google.com/view/nicolechan/cyphyhouse-work/build-process) these packages and was able to calibrate the magnetometer. Also, be careful and make sure that the place where the IMU is mounted does not have strong magnetic fields (motors for instance)
 
 
 ## SVO Odometry and ORB_SLAM2
@@ -88,3 +87,4 @@ After installing the package you can run some examples included in the library.
 
 ## Car Build
 
+For the sensor mount, the [RACECARJ](https://racecarj.com/collections/all) was used on the f1tenth. The [original lidar base](https://github.com/axander89/f1tenth_code/blob/master/RacecarJ/Images/LidarMountOriginal.png) was modified to fit aditional parts to make the mount taller. These files were [3D designed](https://github.com/axander89/f1tenth_code/blob/master/RacecarJ/Images/LidarMount_Modified2.PNG) using creo, and [3D printed](https://github.com/axander89/f1tenth_code/blob/master/RacecarJ/Images/LidarMount_Modified3.PNG) at the [Innovation Studio](http://innovationstudio.mechse.illinois.edu). The files are at [creo](https://github.com/axander89/f1tenth_code/blob/master/RacecarJ/Creo.zip)
